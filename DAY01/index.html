@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(45deg, #552813 35%, transparent 60%) center center/100%,
+            center/cover no-repeat url("https://images.unsplash.com/photo-1428660285748-340f4e33d608");
+    }
+
+    .container {
+        width: 90%;
+        margin: auto;
+        height: 100%;
+    }
+
+    .containere-text {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+
+    .containere-text h1 {
+        font-weight: 700;
+        font-size: 5rem;
+        padding-bottom: 20px;
+    }
+
+    .containere-text h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding-bottom: 20px;
+
+    }
+
+    .containere-text p {
+        font-weight: 100;
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+</style>
+
+<body>
+    <div class="banner">
+        <div class="container">
+            <div class="containere-text">
+                <h1><span id="time"></span></h1>
+                <h2>Maintain your balance.</h2>
+                <p>Time goes on. So whatever you’re going to do, do it. Do it now. Don’t wait.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const time = document.querySelector('#time')
+
+        function displayTime() {
+            const date = new Date();
+            const hours = date.getHours();
+            const mins = date.getMinutes();
+            const seconds = date.getSeconds();
+
+            time.innerHTML = `${hours} : ${mins} : ${seconds}`;
+        }
+
+        window.setInterval(displayTime, 1000)
+    </script>
+</body>
+
+
+</html>
