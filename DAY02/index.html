@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day02</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .wrap {
+            width: 100%;
+            display: flex;
+            font-family: 'Lato', sans-serif;
+
+        }
+
+        .item {
+            width: 25%;
+            position: relative;
+
+        }
+
+        .item img {
+            width: 100%;
+            vertical-align: middle;
+
+        }
+
+        .item .text {
+            color: #fff;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity .5s;
+
+        }
+
+        .item:hover .text {
+            opacity: 1;
+        }
+
+        .text h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .text h1::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            margin: 10px 0;
+            background-color: #fff;
+            transition: width .8s;
+        }
+
+        .item:hover h1::after {
+            width: 100%;
+        }
+
+        .text p {
+            font-size: 1rem;
+            font-weight: 100;
+            width: 60%;
+            text-align: justify;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/500/400?random=10" alt="image">
+            <div class="text">
+                <h1>Lorem ipsum </h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, doloremque corporis. Ipsam,
+                    aperiam velit! Unde odio numquam accusamus omnis, harum suscipit sint soluta dicta corrupti,
+                    reiciendis qui, voluptate non ullam! </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/400?random=9" alt="image">
+            <div class="text">
+                <h1>Lorem ipsum</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem qui eum nobis pariatur nesciunt
+                    repudiandae officia tempore! Qui sit, voluptatibus quod odit asperiores nobis? Consequatur id ea
+                    minima animi nobis? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/400?random=8" alt="image">
+            <div class="text">
+                <h1>Lorem ipsum</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem qui eum nobis pariatur nesciunt
+                    repudiandae officia tempore! Qui sit, voluptatibus quod odit asperiores nobis? Consequatur id ea
+                    minima animi nobis? </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/400?random=7" alt="image">
+            <div class="text">
+                <h1>Lorem ipsum</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem qui eum nobis pariatur nesciunt
+                    repudiandae officia tempore! Qui sit, voluptatibus quod odit asperiores nobis? Consequatur id ea
+                    minima animi nobis? </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
