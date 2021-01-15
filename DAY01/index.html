@@ -73,12 +73,24 @@
         const time = document.querySelector('#time')
 
         function displayTime() {
-            const date = new Date();
-            const hours = date.getHours();
-            const mins = date.getMinutes();
-            const seconds = date.getSeconds();
+            let date = new Date();
+            let hours = date.getHours();
+            let mins = date.getMinutes();
+            let seconds = date.getSeconds();
+
+            if (mins < 10) {
+                mins = '0' + String(mins);
+            }
+            if (seconds < 10) {
+                seconds = '0' + String(seconds);
+            }
+            if (hours < 10) {
+                hours = '0' + String(hours);
+            }
 
             time.innerHTML = `${hours} : ${mins} : ${seconds}`;
+
+
         }
 
         window.setInterval(displayTime, 1000)
