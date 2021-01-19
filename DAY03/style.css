@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background: rgb(4, 2, 29);
+}
+
+.wrap {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+.item {
+    width: 370px;
+    margin: 15px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: transform .3s;
+}
+
+.item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.item .text {
+    padding: 20px;
+    position: relative;
+}
+
+.item .text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 184px solid #fff;
+    border-right: 184px solid #fff;
+    transform: translateY(-100%);
+}
+
+.item:hover {
+    transform: translateY(-50px);
+}
+
+.item:hover .text {
+    background: linear-gradient(0deg, #ff5a5a, #fda32c);
+}
+
+.item:hover h2 {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.item:hover p {
+    color: #fff;
+}
+
+.item:hover .text::before {
+    border-top: 50px solid transparent;
+    border-left: 184px solid #fda32c;
+    border-right: 184px solid #fda32c;
+}
+
+.text h2 {
+    border-bottom: 2px solid #888;
+    padding-bottom: .3em;
+    margin-bottom: .4em;
+    font-weight: 700;
+}
+
+.text p {
+    font-weight: 300;
+}
